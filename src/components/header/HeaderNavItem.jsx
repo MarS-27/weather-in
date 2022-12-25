@@ -1,17 +1,27 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function NavItem({ name }) {
+function NavItem({ name, handleCloseMenu  }) {
     return (
-        <li className="
-            font-regular 
-            text-xl 
-            mr-2 
-            last-of-type:mr-0
-            py-2 px-4
-            hover:rounded-xl
-            hover:bg-sky-300
-        ">
-            <Link to={name === "Today" ? "/" : `/${name}`}>{name}</Link>
+        <li 
+            className="
+                font-regular 
+                text-xl 
+                mr-1
+                last-of-type:mr-0
+                max-sm:mr-0
+                max-sm:mt-3
+                max-sm:w-full 
+                last-of-type:max-sm:mb-3
+            "
+            onClick={handleCloseMenu}
+        >
+            <NavLink 
+                className="block py-2 px-4 text-center rounded-lg hover:bg-sky-300" 
+                style={({ isActive }) =>
+                isActive ? {backgroundColor: "#7dd3fc"} : undefined
+              }
+                to={name === "Today" ? "/" : `/${name}`}
+            >{name}</NavLink>
         </li>
     );
 }

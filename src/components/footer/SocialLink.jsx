@@ -9,8 +9,12 @@ function SocialLink({ linkName }) {
             h-9 
             mr-3 
             last-of-type:mr-0
-            hover:rounded-lg 
-            hover:bg-sky-300" 
+            rounded-lg 
+            hover:bg-sky-300
+            focus:outline-none 
+            focus:ring-2 
+            focus:ring-gray-200 
+        " 
             href={`https://www.${linkName}.com`} 
             target="_blank" 
             rel="noreferrer"

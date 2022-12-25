@@ -14,7 +14,7 @@ function useCurrentGeolocation () {
          
     }, []);
 
-    return {latitude, longitude};
+    return {latitude, longitude, setLatitude, setLongitude};
 } 
 
 export default useCurrentGeolocation;

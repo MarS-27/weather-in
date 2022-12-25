@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import weather from "./reducers/currentWeather";
+import weather from "./reducers/weather";
+import geolocation from "./reducers/geolocation";
 
 const rootReducer = combineReducers({
   weather,
+  geolocation,
 })
 
 const store = configureStore({

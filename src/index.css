@@ -3,36 +3,77 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Roboto-Regular";
-    src: url("fonts/Roboto-Regular.ttf");
-    font-weight: 400;
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto-Regular.ttf");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Roboto-Medium";
-    src: url("fonts/Roboto-Medium.ttf");
-    font-weight: 600;
+  font-family: "Roboto-Medium";
+  src: url("fonts/Roboto-Medium.ttf");
+  font-weight: 600;
 }
 
 @layer components {
-    .flex_component {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .flex_component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .bg_container {
-        position: relative;
-        height: 100vh;
-        width: 100%;
-        --tw-text-opacity: 1;
-        color: rgb(41 37 36 / var(--tw-text-opacity));
-        background-image: url("../public/images/bg.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* color: #292524; */
+  .bg_container {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    --tw-text-opacity: 1;
+    color: rgb(41 37 36 / var(--tw-text-opacity));
+    background-image: url("../public/images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* color: #9d2001; */
+  }
+
+  .animation {
+    transform: translateY(-150%);
+    animation: ani 1s forwards;
+  }
+
+  .search-block__animation {
+    animation: search_ani 1s ease 0s 1 normal forwards;
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+        transform: rotate(360deg);
+      }
+  }
+   
+  @keyframes ani {
+    0% {transform: translateY(-150%);}
+    100% {transform: translateY(0);}
+  }
+
+  @keyframes search_ani {
+    0% {
+      opacity: 0;
+      transform: rotateX(-100deg);
+      transform-origin: top;
     }
+  
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+      transform-origin: top;
+    }
+  }
 }
 
       
