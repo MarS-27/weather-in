@@ -10,7 +10,7 @@ import { fetchWeatherForecast } from "../api/weatherApiForecast";
 
 function Forecast() {
     const { loadingForecast, weatherForecast, errorForecast } = useSelector(state => state.reducer.forecast);
-    const { latitude, longitude } = useContext(GeoContext);
+    const { latitude, longitude, searchLat, searchLon } = useContext(GeoContext);
 
     const dateForecast = [...new Set(weatherForecast.map(forecast => forecast.dt_txt.slice(0, 10)))];
         
@@ -25,7 +25,7 @@ function Forecast() {
     const dispatch = useDispatch();  
 
     useEffect(() => {
-        if (latitude && longitude) {
+        if (latitude && longitude && !searchLat && !searchLon) {
             dispatch(fetchWeatherForecast([latitude, longitude])); 
         };
     }, [dispatch, latitude, longitude]);
