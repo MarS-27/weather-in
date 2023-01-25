@@ -1,4 +1,4 @@
-export const MAIN_URI = "http://api.openweathermap.org";
+export const MAIN_URI = "https://api.openweathermap.org";
 export const PAGES_NAMES = ["Today", "Forecast", "Map"];
 export const SOCIAL_LINKS = ["instagram", "facebook", "linkedin"]; 
 export const TODAY_WEATHER_PARAMS = {

@@ -25,7 +25,9 @@ function Forecast() {
     const dispatch = useDispatch();  
 
     useEffect(() => {
-        dispatch(fetchWeatherForecast([latitude, longitude]));
+        if (latitude && longitude) {
+            dispatch(fetchWeatherForecast([latitude, longitude])); 
+        };
     }, [dispatch, latitude, longitude]);
 
     return (
