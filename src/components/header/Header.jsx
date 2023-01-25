@@ -13,7 +13,7 @@ function Header() {
     const handleCloseMenu = () => setOpenMenu(false);
     
     return (
-        <header className="relative p-3 bg-gray-400 bg-opacity-40 max-md:mb-5">
+        <header className="relative p-3 bg-gray-400 bg-opacity-40">
             <div className="flex_component max-w-7xl mx-auto">
                 <div className="flex_component">
                     <a 
@@ -40,9 +40,9 @@ function Header() {
                         max-sm:px-3 
                         rounded-b-lg"
                     >
-                        {PAGES_NAMES.map((name, i) => (
+                        {PAGES_NAMES.map(name => (
                             <NavItem 
-                                key={i} 
+                                key={name} 
                                 name={name} 
                                 handleCloseMenu ={handleCloseMenu} 
                             />

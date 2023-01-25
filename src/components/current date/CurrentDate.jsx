@@ -13,7 +13,7 @@ function CurrentDate() {
             text-center
             mb-5
             max-md:w-full
-            max-[540px]:text-3xl"
+            max-[920px]:text-3xl"
         >{getWeatherDate(weather.dt)}</p>
     );
 }

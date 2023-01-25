@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import ReloadButton from '../buttons/ReloadPageButton';
 
-function ErrorModal() {
-    const { error } = useSelector(state => state.reducer.weather);
-
+function ErrorModal({ error }) {
     const [openModal, setOpenModal] = useState(true);
 
     const handleClose = () => {

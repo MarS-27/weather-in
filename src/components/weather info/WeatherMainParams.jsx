@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import ucFirst from "../../services/ucFirst";
 
-function WeatherMainParam() {
+function WeatherMainParams() {
     const { weather } = useSelector(state => state.reducer.weather);
-
+    
     return (
         <div>
             <p className="
@@ -23,4 +23,4 @@ function WeatherMainParam() {
     );
 }
 
-export default WeatherMainParam;
+export default WeatherMainParams;

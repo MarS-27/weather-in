@@ -13,6 +13,7 @@ const geolocationSlice = createSlice({
     reducers: {
         cleanCities: (state) => {
             state.cities = [];
+            state.errorSearch = "";
         },
     },
     extraReducers: builder => {

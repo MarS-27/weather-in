@@ -14,6 +14,7 @@ function ReloadButton({ handleClose }) {
                 ring-offset-2 
                 ring-indigo-600 
                 focus:ring-2
+                hover:bg-sky-300 
             "
             onClick={handleClose}
         >

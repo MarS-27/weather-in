@@ -8,13 +8,12 @@ export const fetchWeather = createAsyncThunk(
     "weather/fetchWeather",
     async (params, { rejectWithValue }) => {
         const [ latitude, longitude ] = params;
-
         try {
             const response = await axios.get(`${MAIN_URI}/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${CURRENT_WEATHER_API_KEY}`);
     
             return response.data;
         } catch (error) {
-            return rejectWithValue(error.code); 
+            return rejectWithValue(error.message); 
         }
     }
 );

@@ -3,7 +3,7 @@ import CurrentDate from "../current date/CurrentDate";
 import SearchForm from "../forms/SearchForm";
 import SearchResults from "../search results/SearchResults";
 
-function DateSearchBlock() {
+function DateSearchBlock({ changeCoords }) {
     const { cities, errorSearch } = useSelector(state => state.reducer.geolocation);
     const { weather } = useSelector(state => state.reducer.weather);
 
@@ -27,7 +27,7 @@ function DateSearchBlock() {
                         <CurrentDate />
                         <SearchForm  />  
                     </>   
-                    {(cities[0] || errorSearch) && <SearchResults />}
+                    {(cities[0] || errorSearch) && <SearchResults changeCoords={changeCoords} />}
                 </div>
             )}
         </>

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import { fetchGeolocation } from "../../api/geolocationApi";
 import SearchButton from "../buttons/SearchButton";
 import Loader from '../loader/Loader';

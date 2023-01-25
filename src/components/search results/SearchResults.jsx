@@ -1,6 +1,8 @@
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchWeather } from '../../api/weatherApi';
+import { fetchWeatherForecast } from '../../api/weatherApiForecast';
+import GeoContext from '../../context/changeGeoContext';
 import { cleanCities } from '../../store/reducers/geolocation';
 import CloseButton from '../buttons/CloseButton';
 import LocationChangeButton from "../buttons/LocationChangeButton";
@@ -10,9 +12,12 @@ import SearchNoResults from './SearchNoResults';
 function SearchResults() {
     const { cities, errorSearch } = useSelector(state => state.reducer.geolocation);
     const dispatch = useDispatch();
+    const { changeCoords } = useContext(GeoContext);
 
     const handleCityChange = (latitude, longitude) => { 
         dispatch(fetchWeather([latitude, longitude]));
+        dispatch(fetchWeatherForecast([latitude, longitude]));
+        changeCoords(latitude, longitude);
         handleClose();
     };
 
@@ -28,7 +33,7 @@ function SearchResults() {
             bg-gray-200 
             p-3 
             rounded-lg
-            search-block__animation
+            search-animation
         ">
             <CloseButton handleClose={handleClose} />
             {(cities === "NOT_FOUND") ? 
