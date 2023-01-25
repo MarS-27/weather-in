@@ -1,4 +1,4 @@
-import ForecastParams from '../weather info/ForecastParams';
+import ForecastParams from "../weather info/ForecastParams";
 import { FORECAST_WEATHER_PARAMS } from "../../constants";
 import getWeatherDate from "../../services/getDate";
 

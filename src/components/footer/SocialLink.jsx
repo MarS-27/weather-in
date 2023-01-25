@@ -19,7 +19,7 @@ function SocialLink({ linkName }) {
             target="_blank" 
             rel="noreferrer"
         >
-            <img className=" w-7 h-7 " src={`/images/${linkName}.svg`} alt={`${linkName}`} />
+            <img className=" w-7 h-7 " src={require(`../../images/${linkName}.svg`)} alt={`${linkName}`} />
         </a>
     )
 }

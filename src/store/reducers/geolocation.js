@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const geolocationSlice = createSlice({
-    name: 'geolocation',
+    name: "geolocation",
     initialState,
     reducers: {
         cleanCities: (state) => {

@@ -1,8 +1,8 @@
-import { useSelector } from 'react-redux';
-import TodayWeatherCard from '../components/cards/TodayWeatherCard';
-import DateSearchBlock from '../components/date and search/DateSearch';
-import ErrorModal from '../components/error/ErrorModal';
-import Loader from '../components/loader/Loader';
+import { useSelector } from "react-redux";
+import TodayWeatherCard from "../components/cards/TodayWeatherCard";
+import DateSearchBlock from "../components/date and search/DateSearch";
+import ErrorModal from "../components/error/ErrorModal";
+import Loader from "../components/loader/Loader";
 
 function WeatherToday() {
   const { loading, weather, error } = useSelector(state => state.reducer.weather);

@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 function WeatherParams({ apiParamName, param }) {
     const { weather } = useSelector(state => state.reducer.weather);
@@ -9,7 +9,7 @@ function WeatherParams({ apiParamName, param }) {
         <div className="flex_component justify-start mb-3 last-of-type:mb-0">
             <img
                 className="w-16 h-16 mr-3 max-[540px]:w-12 max-[540px]:h-12"
-                src={`/images/${apiParamName}.svg`} 
+                src={require(`../../images/${apiParamName}.svg`)}
                 alt={apiParamName}
             />
             <p>

@@ -1,11 +1,11 @@
-import { useEffect, useState, useContext } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState, useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import GeoContext from "../context/changeGeoContext";
-import ForecastCard from '../components/cards/ForecastCard';
-import DateSearchBlock from '../components/date and search/DateSearch';
-import ErrorModal from '../components/error/ErrorModal';
-import Loader from '../components/loader/Loader';
-import { fetchWeatherForecast } from '../api/weatherApiForecast';
+import ForecastCard from "../components/cards/ForecastCard";
+import DateSearchBlock from "../components/date and search/DateSearch";
+import ErrorModal from "../components/error/ErrorModal";
+import Loader from "../components/loader/Loader";
+import { fetchWeatherForecast } from "../api/weatherApiForecast";
 
 
 function Forecast() {

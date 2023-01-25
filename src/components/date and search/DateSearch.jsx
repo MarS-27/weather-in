@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import CurrentDate from "../current date/CurrentDate";
 import SearchForm from "../forms/SearchForm";
 import SearchResults from "../search results/SearchResults";

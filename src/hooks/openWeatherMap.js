@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import L from "../../node_modules/leaflet/dist/leaflet";
 import "../../node_modules/leaflet-openweathermap/leaflet-openweathermap";
+import owmloading from "../images/owmloading.gif";
 
 const MAP_API_KEY = process.env.REACT_APP_WEATHER_MAP_API;
 
@@ -12,12 +13,12 @@ function useOpenWeatherMap(lat, lon) {
         container._leaflet_id = null;
     }
 
-    const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 18, 
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a>',        
     });
 
-    const humanitarian = L.tileLayer('https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    const humanitarian = L.tileLayer("https://tile-{s}.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
         maxZoom: 17,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors</a> <a href="https://www.hotosm.org/" target="_blank">Tiles courtesy of Humanitarian OpenStreetMap Team</a>'
     });
@@ -31,7 +32,7 @@ function useOpenWeatherMap(lat, lon) {
     const temp = L.OWM.temperature({opacity: 0.5, appId: MAP_API_KEY});
     const wind = L.OWM.wind({opacity: 0.5, appId: MAP_API_KEY});
 
-    const city = L.OWM.current({intervall: 15, appId: MAP_API_KEY, imageLoadingUrl: "/images/owmloading.gif"});
+    const city = L.OWM.current({intervall: 15, appId: MAP_API_KEY, imageLoadingUrl: owmloading});
 
     const baseMaps = { "OSM Standard": osm, "OSM Humanitarian": humanitarian };
     const overlayMaps = { 

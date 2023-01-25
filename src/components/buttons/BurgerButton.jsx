@@ -1,3 +1,5 @@
+import burger from "../../images/burger.svg";
+import close from "../../images/close.svg";
 
 function BurgerButton({ openMenu, handleOpenMenu }) {
     return (
@@ -21,9 +23,9 @@ function BurgerButton({ openMenu, handleOpenMenu }) {
             onClick={handleOpenMenu}
         >
             {!openMenu ? (
-                <img className="w-6 h-6" src="/images/burger.svg" alt="burger" />
+                <img className="w-6 h-6" src={burger} alt="burger" />
             ) : (
-                <img className="w-6 h-6" src="/images/close.svg" alt="close" />
+                <img className="w-6 h-6" src={close} alt="close" />
             )}
         </button>
     );

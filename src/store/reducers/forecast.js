@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const forecastSlice = createSlice({
-    name: 'forecast',
+    name: "forecast",
     initialState,
     reducers: {},
     extraReducers: builder => {

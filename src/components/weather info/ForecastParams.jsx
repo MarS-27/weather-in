@@ -13,7 +13,7 @@ function ForecastParams({ apiParamName, param, forecastItems }) {
                     <> 
                         <img
                             className="w-6 h-6 mr-1 max-[540px]:w-4 max-[540px]:h-4"
-                            src={`/images/${apiParamName}.svg`} 
+                            src={require(`../../images/${apiParamName}.svg`)}
                             alt={apiParamName}
                         />
                         <p className="text-sm max-lg:text-xs max-[820px]:text-[10px]">
@@ -28,7 +28,7 @@ function ForecastParams({ apiParamName, param, forecastItems }) {
                     <div key={forecast.dt} className="forecast-icon w-[10%] h-[10%] relative mb-1">
                         <img 
                             className="w-full h-full" 
-                            src={`/images/${forecast.weather[0].icon.replace(/.$/, "")}.svg`}
+                            src={require(`../../images/${forecast.weather[0].icon.replace(/.$/, "")}.svg`)}
                             alt={forecast.weather[0].description}
                         />
                         <p className="

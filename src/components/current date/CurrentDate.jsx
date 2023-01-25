@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import getWeatherDate from "../../services/getDate";
 
 function CurrentDate() {

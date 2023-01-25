@@ -1,3 +1,4 @@
+import search from "../../images/search.svg";
 
 function SearchButton() {
     return (
@@ -18,7 +19,7 @@ function SearchButton() {
                 focus:ring-gray-200
             " 
         >
-            <img className="w-6 h-6" src="/images/search.svg" alt="search" />
+            <img className="w-6 h-6" src={search} alt="search" />
         </button>
     );
 };

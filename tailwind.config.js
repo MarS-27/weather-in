@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'regular': 'Roboto-Regular',
-      'medium': 'Roboto-Medium',
+      "regular": "Roboto-Regular",
+      "medium": "Roboto-Medium",
     },
   },
   plugins: [],

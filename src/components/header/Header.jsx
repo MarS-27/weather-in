@@ -1,10 +1,12 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { PAGES_NAMES } from "../../constants/index";
-import BurgerButton from '../buttons/BurgerButton';
-import NavItem from './HeaderNavItem';
+import BurgerButton from "../buttons/BurgerButton";
+import NavItem from "./HeaderNavItem";
+import logo from "../../images/logo.png";
 
 function Header() {
+
     const { weather } = useSelector(state => state.reducer.weather);
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -23,7 +25,7 @@ function Header() {
                         target="_blank" 
                         rel="noreferrer"
                     >
-                        <img className="w-20 h-20" src="/images/logo.png" alt="Weather in Logo"/>   
+                        <img className="w-20 h-20" src={logo} alt="Weather in Logo"/>   
                     </a> 
                     <p className="text-5xl font-medium max-md:text-3xl max-[340px]:hidden">Weather in {weather.name}</p>
                 </div>

@@ -18,7 +18,7 @@ function LocationChangeButton({ city, handleCityChange }) {
             " 
             onClick={() => handleCityChange(city.lat, city.lon)}
         >
-            {city.name}, {city.state ? `${city.state},` : ''} {city.country}
+            {city.name}, {city.state ? `${city.state},` : ""} {city.country}
         </button>
     );
 };

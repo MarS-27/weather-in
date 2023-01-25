@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const weatherSlice = createSlice({
-    name: 'weather',
+    name: "weather",
     initialState,
     reducers: {},
     extraReducers: builder => {

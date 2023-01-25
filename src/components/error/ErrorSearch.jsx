@@ -1,9 +1,10 @@
+import errorImg from "../../images/error.svg";
 
 function ErrorSearch({ error }) {
    
     return (
         <div>
-            <img className="w-10 h-10 mx-auto" src="/images/error.svg" alt="error"/>
+            <img className="w-10 h-10 mx-auto" src={errorImg} alt="error"/>
             <p
                 className="
                     font-regular 

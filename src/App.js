@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchWeather } from './api/weatherApi';
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { fetchWeather } from "./api/weatherApi";
 import {
-  BrowserRouter,
   Routes,
   Route,
-} from 'react-router-dom';
-import useCurrentGeolocation from './hooks/currentGeolocation';
-import Header from './components/header/Header';
-import WeatherToday from './pages/WeatherToday';
-import Forecast from './pages/WeatherForecast';
-import WeatherMap from './pages/WeatherMap';
-import Footer from './components/footer/Footer';
-import ErrorModal from './components/error/ErrorModal';
-import GeoContext from './context/changeGeoContext';
-import Loader from './components/loader/Loader';
+  HashRouter,
+} from "react-router-dom";
+import useCurrentGeolocation from "./hooks/currentGeolocation";
+import Header from "./components/header/Header";
+import WeatherToday from "./pages/WeatherToday";
+import Forecast from "./pages/WeatherForecast";
+import WeatherMap from "./pages/WeatherMap";
+import Footer from "./components/footer/Footer";
+import ErrorModal from "./components/error/ErrorModal";
+import GeoContext from "./context/changeGeoContext";
+import Loader from "./components/loader/Loader";
 
 function App() {
   const { latitude, longitude } = useCurrentGeolocation();
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <div className="bg_container">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <GeoContext.Provider value={{latitude, longitude, searchLat, searchLon, changeCoords}}>
           <main className="max-w-7xl p-3 mx-auto w-full">
@@ -50,7 +50,7 @@ function App() {
           </main>
         </GeoContext.Provider>
         <Footer />
-      </BrowserRouter>
+      </ HashRouter>
     </div>
   );
 }

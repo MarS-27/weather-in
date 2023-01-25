@@ -1,3 +1,4 @@
+import close from "../../images/close.svg";
 
 function CloseButton({ handleClose }) {
     return (
@@ -23,7 +24,7 @@ function CloseButton({ handleClose }) {
         >
             <img 
                 className="w-4 h-4" 
-                src="/images/close.svg" 
+                src={close} 
                 alt="close" 
             />
         </button>

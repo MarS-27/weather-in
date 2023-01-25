@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchGeolocation } from "../../api/geolocationApi";
 import SearchButton from "../buttons/SearchButton";
-import Loader from '../loader/Loader';
+import Loader from "../loader/Loader";
 
 function SearchForm() {
     const { loadingSearch } = useSelector(state => state.reducer.geolocation);
